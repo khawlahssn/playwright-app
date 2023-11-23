@@ -8,6 +8,7 @@ import { Register } from "../page-objects/Register";
 import { DeliveryDetails } from "../page-objects/DeliveryDetails";
 import { deliveryDetails as userAddress } from "../data/deliveryDetails";
 import { Payment } from "../page-objects/Payment";
+import { paymentDetails } from "../data/paymentDetails";
 
 test.only("", async ({ page }) => {
   // ProductsPage.js
@@ -49,4 +50,8 @@ test.only("", async ({ page }) => {
   // PaymentPage.js
   const payment = new Payment(page);
   await payment.activateDiscount();
+  await payment.fillPaymentDetails(paymentDetails);
+  await payment.completePayment();
+
+  await page.pause();
 });
