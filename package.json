@@ -1,0 +1,19 @@
+{
+  "name": "playwright-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test --headed"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.39.0",
+    "@types/node": "^20.8.10"
+  },
+  "dependencies": {
+    "uuid": "^9.0.0"
+  }
+}
