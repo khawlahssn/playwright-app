@@ -53,5 +53,5 @@ test.only("", async ({ page }) => {
   await payment.fillPaymentDetails(paymentDetails);
   await payment.completePayment();
 
-  await page.pause();
+  // await page.pause();
 });
